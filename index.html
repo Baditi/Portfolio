@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo-color.png" class="logo">
+                <ul>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Android Developer</p>
+                <h1>Hi,I'm <span>Aditi</span><br> Gupta From Banasthali</h1>
+            </div>
+        </div>
+    </div>
+    <!--About section-->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/user1.jpg" >
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p> I'm Aditi Gupta, a student at Banasthali Vidyapith, deeply passionate about Android development. Through my education, I've mastered Java, Kotlin, and Android Studio, crafting intuitive mobile applications. My experiences have equipped me with both frontend and backend development skills, fostering collaboration and attention to detail. Beyond coding, I'm committed to using technology for societal good and enjoy mentoring others. Moving forward, I aspire to further excel in Android development, contributing to impactful projects and advancing innovation.</p>
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links"onclick="opentab('experience')">Experience</p>
+                            <p class="tab-links"onclick="opentab('education')">Education</p>
+                        </div>
+                        <div>
+                            <div class="tab-contents active-tab" id="skills">
+                                <ul>
+                                    <li><span>Android Development</span><br>  App Development</li>
+                                    <li><span>UI/UX</span><br> Designing Web/App Interfaces</li>
+                                    <li><span>Web Development</span><br> Website Development</li>
+                                </ul>
+                            </div>
+                            <div class="tab-contents" id="experience">
+                                <ul>
+                                    <li>No experience yet..</li>
+                                </ul>
+                            </div>
+                            <div class="tab-contents" id="education">
+                                <ul>
+                                    <li><span>2018-2019</span><br>  High School CBSE</li>
+                                    <li><span>2020-2021</span><br> Secondary High School Banasthali Board</li>
+                                    <li><span>2021</span><br> B.Tech(Information Technology)</li>
+                                </ul>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!----------PORTFOLIO-------------->
+
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title"> My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/work-1.png" >
+                    <div class="layer">
+                        <h3>To Do List App</h3>
+                        <p>The app connects you to the talented people around the world.
+                            Download it from play store.
+                        </p>
+                        <a href="https://github.com/Baditi/Todo"><ion-icon name="share-social-outline"></ion-icon></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/work-2.png" >
+                    <div class="layer">
+                        <h3>Pacman App</h3>
+                        <p>The app connects you to the talented people around the world.
+                            Download it from play store.
+                        </p>
+                        <a href="https://github.com/Baditi/Pacman"><ion-icon name="share-social-outline"></ion-icon></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/work-3.png" >
+                    <div class="layer">
+                        <h3>Online Grocery App</h3>
+                        <p>The app connects you to the talented people around the world.
+                            Download it from play store.
+                        </p>
+                        <a href="https://github.com/Baditi/onlinecom"><ion-icon name="share-social-outline"></ion-icon></a>
+                    </div>
+                </div>
+            </div>
+            <a href="https://github.com/Baditi/Assignment" class="btn">See more</a>
+        </div>
+    </div>
+    <!------------contact------------->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><ion-icon name="mail-outline"></ion-icon> deepaditi2002@gmail.com</p>
+                    <p><ion-icon name="call-outline"></ion-icon> 0123456789</p>
+                    <div class="social-icons">
+                        <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+                        <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+                        <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+                        <a href="#"><ion-icon name="logo-linkedin"></ion-icon></a>
+                    </div>
+                    <a href="images/my-cv1.pdf" download class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form >
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="Message"  rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+<script>
+   
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname) {
+        for (tablink of tablinks) {
+            tablink.classList.remove("active-link");
+        }
+        for (tabcontent of tabcontents) {
+            tabcontent.classList.remove("active-tab");
+            
+            tabcontent.innerHTML = "";
+        }
+        event.currentTarget.classList.add("active-link");
+        var activeTabContent = document.getElementById(tabname);
+        activeTabContent.classList.add("active-tab");
+
+        
+        if (tabname === 'skills') {
+            loadSkillsContent(activeTabContent);
+        } else if (tabname === 'experience') {
+            loadExperienceContent(activeTabContent);
+        } else if (tabname === 'education') {
+            loadEducationContent(activeTabContent);
+        }
+    }
+
+    function loadSkillsContent(tabContent) {
+        var skillsList = document.createElement('ul');
+        skillsList.innerHTML = `
+            <li><span>Android Development</span><br>  App Development</li>
+            <li><span>UI/UX</span><br> Designing Web/App Interfaces</li>
+            <li><span>Web Development</span><br> Website Development</li>
+        `;
+        tabContent.appendChild(skillsList);
+    }
+
+    function loadExperienceContent(tabContent) {
+        var experienceList = document.createElement('ul');
+        experienceList.innerHTML = `
+            <li>No experience yet..</li>
+        `;
+        tabContent.appendChild(experienceList);
+    }
+
+    function loadEducationContent(tabContent) {
+        var educationList = document.createElement('ul');
+        educationList.innerHTML = `
+            <li><span>2018-2019</span><br>  High School CBSE</li>
+            <li><span>2020-2021</span><br> Secondary High School Banasthali Board</li>
+            <li><span>2021</span><br> B.Tech(Information Technology)</li>
+        `;
+        tabContent.appendChild(educationList);
+    }
+
+
+
+</script>
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js">
+
+</script>
+
+
+
+</body>
+</html>
